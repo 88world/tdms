@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="T.D.M.S. Handyman & Renovation Services. Top-rated plumbing, drywall, and luxury renovations in Woodbridge and the GTA. 10-year warranty. Call 437-259-2664.">
+    <meta name="keywords" content="Plumbing GTA, Drywall Woodbridge, Kitchen Renovation Toronto, Bathroom Remodel, Handyman Services, T.D.M.S.">
+    <meta name="author" content="T.D.M.S. Handyman">
+    <title>T.D.M.S. | Premium Plumbing & Renovations GTA</title>
+
+    <!-- Google Fonts: Inter for clean, modern readability -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;900&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        gold: {
+                            400: '#fbbf24',
+                            500: '#f59e0b',
+                            600: '#d97706',
+                            700: '#b45309',
+                        },
+                        slate: {
+                            850: '#1e293b', 
+                            900: '#0f172a',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Custom Hero Background */
+        .hero-bg {
+            background-image: linear-gradient(rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.75)), url('https://images.unsplash.com/photo-1600607686527-6fb886090705?q=80&w=2700&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+        
+        /* Glassmorphism Effect */
+        .glass-card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .text-shadow {
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased">
+
+    <!-- HEADER / NAVIGATION -->
+    <nav class="bg-slate-900 text-white fixed w-full z-50 transition-all duration-300 shadow-lg" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <!-- Logo -->
+                <a href="#" class="flex items-center gap-2 group">
+                    <div class="w-10 h-10 bg-gold-600 rounded-lg flex items-center justify-center text-slate-900 font-black text-xl shadow-lg group-hover:bg-white transition">
+                        T
+                    </div>
+                    <div class="flex flex-col">
+                        <span class="font-black text-xl tracking-tighter leading-none group-hover:text-gold-500 transition">T.D.M.S.</span>
+                        <span class="text-[10px] tracking-widest text-slate-400 uppercase">Handyman & Renovation</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-8 items-center font-medium text-sm tracking-wide">
+                    <a href="#services" class="hover:text-gold-500 transition duration-300">SERVICES</a>
+                    <a href="#portfolio" class="hover:text-gold-500 transition duration-300">PORTFOLIO</a>
+                    <a href="#calculator" class="hover:text-gold-500 transition duration-300">PRICE ESTIMATE</a>
+                    <a href="#contact" class="hover:text-gold-500 transition duration-300">CONTACT</a>
+                    <a href="tel:4372592664" class="bg-gold-600 hover:bg-gold-500 text-white px-6 py-2.5 rounded-full font-bold shadow-lg shadow-gold-600/30 transition transform hover:-translate-y-0.5">
+                        <i class="fas fa-phone-alt mr-2 animate-pulse"></i> 437-259-2664
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button class="md:hidden text-2xl text-white focus:outline-none" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-slate-800 border-t border-slate-700">
+            <div class="px-4 pt-2 pb-4 space-y-1">
+                <a href="#services" class="block py-3 text-slate-300 hover:text-white border-b border-slate-700">Services</a>
+                <a href="#calculator" class="block py-3 text-slate-300 hover:text-white border-b border-slate-700">Get Quote</a>
+                <a href="#portfolio" class="block py-3 text-slate-300 hover:text-white border-b border-slate-700">Portfolio</a>
+                <a href="tel:4372592664" class="block py-3 mt-2 text-center bg-gold-600 rounded text-white font-bold">Call Now</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <header class="hero-bg min-h-screen flex items-center relative pt-20">
+        <div class="absolute bottom-0 left-0 w-full h-24 bg-gradient-to-t from-slate-50 to-transparent"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            
+            <!-- Hero Text -->
+            <div class="text-white" data-aos="fade-up" data-aos-duration="1000">
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-gold-600/20 border border-gold-600/50 text-gold-400 text-xs font-bold uppercase tracking-widest mb-6">
+                    <span class="w-2 h-2 rounded-full bg-gold-500 animate-pulse"></span>
+                    Serving Woodbridge & GTA
+                </div>
+                <h1 class="text-5xl lg:text-7xl font-black leading-tight mb-6 text-shadow">
+                    PLUMBING <br>
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-gold-400 to-amber-200">SERVICES</span>
+                    <br><span class="text-3xl lg:text-5xl font-bold text-slate-200">& RENOVATIONS</span>
+                </h1>
+                <p class="text-lg text-slate-300 mb-8 max-w-lg leading-relaxed">
+                    From emergency plumbing fixes to luxury kitchen and bathroom transformations. We deliver problem-free renovation services with a 10-year warranty.
+                </p>
+                
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="#calculator" class="bg-gold-600 hover:bg-gold-500 text-white text-center font-bold py-4 px-8 rounded-lg shadow-xl shadow-gold-900/50 transition transform hover:-translate-y-1">
+                        Get an Instant Estimate
+                    </a>
+                    <a href="#portfolio" class="bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/30 text-white text-center font-bold py-4 px-8 rounded-lg transition">
+                        View Our Work
+                    </a>
+                </div>
+
+                <!-- Trust Badges -->
+                <div class="mt-10 flex items-center gap-6 text-sm font-medium text-slate-400">
+                    <div class="flex items-center gap-2"><i class="fas fa-certificate text-gold-500"></i> Licensed</div>
+                    <div class="flex items-center gap-2"><i class="fas fa-shield-alt text-gold-500"></i> Insured</div>
+                    <div class="flex items-center gap-2"><i class="fas fa-star text-gold-500"></i> Top Rated</div>
+                </div>
+            </div>
+
+            <!-- Hero Image/Card (Desktop Only) -->
+            <div class="hidden lg:block relative" data-aos="fade-left" data-aos-duration="1200" data-aos-delay="200">
+                <div class="relative z-10 rounded-2xl overflow-hidden shadow-2xl border-4 border-white/10">
+                    <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&q=80&w=800" alt="Luxury Bathroom Renovation" class="w-full h-auto object-cover transform hover:scale-105 transition duration-700">
+                    <div class="absolute bottom-0 left-0 w-full p-6 bg-gradient-to-t from-black/90 to-transparent">
+                        <p class="text-gold-400 font-bold text-sm uppercase">Featured Project</p>
+                        <p class="text-white font-bold text-xl">Luxury Bathroom Remodel</p>
+                    </div>
+                </div>
+                <!-- Decorative Elements -->
+                <div class="absolute -top-10 -right-10 w-40 h-40 bg-gold-600 rounded-full blur-3xl opacity-20"></div>
+                <div class="absolute -bottom-10 -left-10 w-40 h-40 bg-blue-600 rounded-full blur-3xl opacity-20"></div>
+            </div>
+        </div>
+    </header>
+
+    <!-- KEY SELLING POINTS (FROM FLYER) -->
+    <section class="py-12 bg-white relative z-20 -mt-16 mx-4 md:mx-auto max-w-7xl rounded-2xl shadow-xl border border-slate-100">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 divide-y md:divide-y-0 md:divide-x divide-slate-100">
+            
+            <div class="p-6 text-center group hover:bg-slate-50 transition rounded-l-2xl">
+                <div class="w-14 h-14 mx-auto bg-slate-100 rounded-full flex items-center justify-center mb-4 group-hover:bg-gold-100 transition">
+                    <i class="fas fa-hard-hat text-2xl text-slate-700 group-hover:text-gold-600 transition"></i>
+                </div>
+                <h3 class="font-bold text-slate-900 mb-2">Problem-Free</h3>
+                <p class="text-sm text-slate-500">Hassle-free experience with qualified experts.</p>
+            </div>
+
+            <div class="p-6 text-center group hover:bg-slate-50 transition">
+                <div class="w-14 h-14 mx-auto bg-slate-100 rounded-full flex items-center justify-center mb-4 group-hover:bg-gold-100 transition">
+                    <i class="fas fa-stopwatch text-2xl text-slate-700 group-hover:text-gold-600 transition"></i>
+                </div>
+                <h3 class="font-bold text-slate-900 mb-2">On-Time Completion</h3>
+                <p class="text-sm text-slate-500">We respect deadlines and complete projects on schedule.</p>
+            </div>
+
+            <div class="p-6 text-center group hover:bg-slate-50 transition">
+                <div class="w-14 h-14 mx-auto bg-slate-100 rounded-full flex items-center justify-center mb-4 group-hover:bg-gold-100 transition">
+                    <i class="fas fa-file-invoice-dollar text-2xl text-slate-700 group-hover:text-gold-600 transition"></i>
+                </div>
+                <h3 class="font-bold text-slate-900 mb-2">Cost Transparency</h3>
+                <p class="text-sm text-slate-500">Upfront pricing. No hidden fees or surprises.</p>
+            </div>
+
+            <div class="p-6 text-center group hover:bg-slate-50 transition rounded-r-2xl">
+                <div class="w-14 h-14 mx-auto bg-slate-100 rounded-full flex items-center justify-center mb-4 group-hover:bg-gold-100 transition">
+                    <i class="fas fa-medal text-2xl text-slate-700 group-hover:text-gold-600 transition"></i>
+                </div>
+                <h3 class="font-bold text-slate-900 mb-2">10 Years Warranty</h3>
+                <p class="text-sm text-slate-500">We stand behind our quality workmanship.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SERVICES SECTION -->
+    <section id="services" class="py-24 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <span class="text-gold-600 font-bold tracking-widest text-sm uppercase">What We Do</span>
+                <h2 class="text-4xl font-black text-slate-900 mt-2 mb-4">Comprehensive Services</h2>
+                <div class="w-24 h-1.5 bg-gold-500 mx-auto rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Service Card 1: Plumbing -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition group" data-aos="fade-up" data-aos-delay="100">
+                    <div class="h-56 overflow-hidden relative">
+                        <img src="media/plumbing.jpeg" alt="Plumbing Services" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+                        <div class="absolute top-4 right-4 bg-slate-900 text-white text-xs font-bold px-3 py-1 rounded shadow">SPECIALTY</div>
+                    </div>
+                    <div class="p-8">
+                        <h3 class="text-2xl font-bold mb-3 text-slate-900">Plumbing Services</h3>
+                        <p class="text-slate-600 mb-6 text-sm leading-relaxed">Expert rough-ins, leak repairs, and luxury fixture installations. Whether it's a basement finish or a bathroom upgrade, our licensed quality ensures peace of mind.</p>
+                        <ul class="space-y-2 text-sm text-slate-600 mb-6">
+                            <li class="flex items-center gap-2"><i class="fas fa-check text-gold-500"></i> New Drain & Pipe Install</li>
+                            <li class="flex items-center gap-2"><i class="fas fa-check text-gold-500"></i> Toilet, Sink & Tub Install</li>
+                            <li class="flex items-center gap-2"><i class="fas fa-check text-gold-500"></i> Leak Detection & Repair</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Service Card 2: Drywall -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition group" data-aos="fade-up" data-aos-delay="200">
+                    <div class="h-56 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1620626011761-996317b8d101?auto=format&fit=crop&q=80&w=800" alt="Drywall Installation" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+                    </div>
+                    <div class="p-8">
+                        <h3 class="text-2xl font-bold mb-3 text-slate-900">Drywall & Taping</h3>
+                        <p class="text-slate-600 mb-6 text-sm leading-relaxed">The foundation of a perfect room. We provide board installation, mudding, taping, and sanding to a flawless, paint-ready finish.</p>
+                        <ul class="space-y-2 text-sm text-slate-600 mb-6">
+                            <li class="flex items-center gap-2"><i class="fas fa-check text-gold-500"></i> Board Installation & Framing</li>
+                            <li class="flex items-center gap-2"><i class="fas fa-check text-gold-500"></i> Level 5 Smooth Finishes</li>
+                            <li class="flex items-center gap-2"><i class="fas fa-check text-gold-500"></i> Insulation & Vapor Barriers</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Service Card 3: Kitchens -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition group" data-aos="fade-up" data-aos-delay="300">
+                    <div class="h-56 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1556911220-bff31c812dba?auto=format&fit=crop&q=80&w=800" alt="Kitchen Renovation" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+                    </div>
+                    <div class="p-8">
+                        <h3 class="text-2xl font-bold mb-3 text-slate-900">Kitchen Renovations</h3>
+                        <p class="text-slate-600 mb-6 text-sm leading-relaxed">Transform your kitchen into a modern masterpiece. We handle shaker cabinets, quartz islands, backsplashes, and full electrical/plumbing integration.</p>
+                        <a href="#portfolio" class="text-gold-600 font-bold text-sm hover:underline">View Gallery <i class="fas fa-arrow-right ml-1"></i></a>
+                    </div>
+                </div>
+
+                <!-- Service Card 4: Bathrooms -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition group" data-aos="fade-up" data-aos-delay="400">
+                    <div class="h-56 overflow-hidden relative">
+                        <img src="https://cdn-ilcpnnh.nitrocdn.com/JyfVQegtpLSTYrrHtkmaOaslRMIUIjPC/assets/images/optimized/rev-1b7e87b/www.oraanj-interiors.co.uk/wp-content/uploads/2025/02/muswell_hill_img3.jpg" alt="Luxury Bathroom" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+                    </div>
+                    <div class="p-8">
+                        <h3 class="text-2xl font-bold mb-3 text-slate-900">Luxury Bathrooms</h3>
+                        <p class="text-slate-600 mb-6 text-sm leading-relaxed">Spa-like retreats featuring glass showers, freestanding tubs, large-format tiling, and premium gold/brass fixtures.</p>
+                        <a href="#portfolio" class="text-gold-600 font-bold text-sm hover:underline">View Gallery <i class="fas fa-arrow-right ml-1"></i></a>
+                    </div>
+                </div>
+
+                <!-- Service Card 5: Flooring -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition group" data-aos="fade-up" data-aos-delay="500">
+                    <div class="h-56 overflow-hidden relative">
+                        <img src="media/flooring.jpeg" alt="Flooring" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+                    </div>
+                    <div class="p-8">
+                        <h3 class="text-2xl font-bold mb-3 text-slate-900">Flooring & Tiling</h3>
+                        <p class="text-slate-600 mb-6 text-sm leading-relaxed">Precision installation of hardwood, laminate, and tile. We use leveling systems for a perfectly flat, durable finish.</p>
+                    </div>
+                </div>
+
+                <!-- Service Card 6: Exterior -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition group" data-aos="fade-up" data-aos-delay="600">
+                    <div class="h-56 overflow-hidden relative">
+                        <img src="media/exterior.jpeg" alt="Exterior" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+                    </div>
+                    <div class="p-8">
+                        <h3 class="text-2xl font-bold mb-3 text-slate-900">Landscaping & Exterior</h3>
+                        <p class="text-slate-600 mb-6 text-sm leading-relaxed">Boost curb appeal with interlocking driveways, custom pressure-treated wood fences, and modern entrance upgrades.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- CALCULATOR SECTION -->
+    <section id="calculator" class="py-24 bg-slate-900 text-white relative overflow-hidden">
+        <!-- Background Pattern -->
+        <div class="absolute inset-0 opacity-5" style="background-image: url('data:image/svg+xml,%3Csvg width=\'60\' height=\'60\' viewBox=\'0 0 60 60\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'none\' fill-rule=\'evenodd\'%3E%3Cg fill=\'%23d97706\' fill-opacity=\'1\'%3E%3Cpath d=\'M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');"></div>
+        
+        <div class="max-w-4xl mx-auto px-4 relative z-10" data-aos="zoom-in">
+            <div class="text-center mb-12">
+                <span class="text-gold-500 font-bold tracking-widest text-sm uppercase">Transparent Pricing</span>
+                <h2 class="text-3xl md:text-5xl font-black mt-2 mb-4">Get a Rough Estimate</h2>
+                <p class="text-slate-400 max-w-xl mx-auto">Select a service below to get an instant market-rate range for 2025 in the GTA. Note: Final quotes require an on-site visit.</p>
+            </div>
+
+            <div class="bg-slate-800 p-8 md:p-12 rounded-3xl shadow-2xl border border-slate-700">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+                    <div>
+                        <label class="block text-sm font-bold text-gold-500 mb-3 uppercase tracking-wider">Service Type</label>
+                        <div class="relative">
+                            <select id="serviceType" class="w-full bg-slate-900 border border-slate-600 rounded-xl p-4 text-white appearance-none focus:outline-none focus:border-gold-500 transition cursor-pointer" onchange="updateCalculatorInput()">
+                                <option value="plumbing">Plumbing (Rough-in/Install)</option>
+                                <option value="drywall">Drywall (Install & Finish)</option>
+                                <option value="bathroom">Bathroom Renovation</option>
+                                <option value="kitchen">Kitchen Renovation</option>
+                                <option value="flooring">Flooring Installation</option>
+                                <option value="fence">Fence Installation</option>
+                            </select>
+                            <div class="absolute right-4 top-1/2 transform -translate-y-1/2 pointer-events-none text-slate-400">
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <label id="inputLabel" class="block text-sm font-bold text-gold-500 mb-3 uppercase tracking-wider">Number of Fixtures</label>
+                        <input type="number" id="unitInput" class="w-full bg-slate-900 border border-slate-600 rounded-xl p-4 text-white focus:outline-none focus:border-gold-500 transition placeholder-slate-600" placeholder="e.g., 3">
+                    </div>
+                </div>
+
+                <div class="text-center">
+                    <button onclick="calculatePrice()" class="bg-gradient-to-r from-gold-600 to-gold-500 hover:from-gold-500 hover:to-gold-400 text-white font-bold py-4 px-12 rounded-full text-lg shadow-lg shadow-gold-900/50 transition transform hover:scale-105 mb-8">
+                        Calculate Estimate
+                    </button>
+                    
+                    <div id="resultBox" class="hidden bg-slate-900/80 p-8 rounded-2xl border border-gold-500/30 backdrop-blur-sm">
+                        <p class="text-slate-400 text-sm mb-2 uppercase tracking-widest font-bold">Estimated Market Range (CAD)</p>
+                        <p id="priceOutput" class="text-4xl md:text-6xl font-black text-white bg-clip-text text-transparent bg-gradient-to-r from-white to-slate-400"></p>
+                        <div class="mt-4 flex justify-center gap-4 text-xs text-slate-500">
+                            <span><i class="fas fa-info-circle mr-1"></i> Based on 2025 GTA Averages</span>
+                            <span><i class="fas fa-hammer mr-1"></i> Materials & Labor Included</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PORTFOLIO / GALLERY (GRID) -->
+    <section id="portfolio" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-12">
+                <div>
+                    <span class="text-gold-600 font-bold tracking-widest text-sm uppercase">Recent Projects</span>
+                    <h2 class="text-4xl font-black text-slate-900 mt-2">Our Portfolio</h2>
+                </div>
+                <div class="hidden md:block">
+                    <a href="tel:4372592664" class="text-slate-900 font-bold border-b-2 border-gold-500 hover:text-gold-600 transition pb-1">Start Your Project <i class="fas fa-arrow-right ml-2"></i></a>
+                </div>
+            </div>
+
+            <!-- Masonry Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 auto-rows-[300px]">
+                
+                <!-- Kitchen - Large -->
+                <div class="md:col-span-2 row-span-2 relative group overflow-hidden rounded-2xl cursor-pointer" data-aos="fade-in">
+                    <!-- REPLACE SRC below with your uploaded image: WhatsApp Image 2025-12-06 at 2.00.48 AM.jpeg -->
+                    <img src="media/kitchen.jpeg" class="w-full h-full object-cover transition duration-700 group-hover:scale-105" alt="Modern Kitchen">
+                    <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-8">
+                        <div class="text-white transform translate-y-4 group-hover:translate-y-0 transition duration-300">
+                            <h4 class="font-bold text-2xl">Modern Shaker Kitchen</h4>
+                            <p class="text-sm text-slate-200">Quartz Island & Custom Cabinetry</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bathroom - Tall -->
+                <div class="md:col-span-1 row-span-2 relative group overflow-hidden rounded-2xl cursor-pointer" data-aos="fade-in" data-aos-delay="100">
+                    <!-- REPLACE SRC below with: WhatsApp Image 2025-12-06 at 2.00.58 AM (2).jpeg -->
+                    <img src="media/shower.jpeg" class="w-full h-full object-cover transition duration-700 group-hover:scale-105" alt="Luxury Shower">
+                    <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-8">
+                        <div class="text-white transform translate-y-4 group-hover:translate-y-0 transition duration-300">
+                            <h4 class="font-bold text-xl">Spa Ensuite</h4>
+                            <p class="text-sm text-slate-200">Glass Enclosure & Gold Fixtures</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Driveway -->
+                <div class="relative group overflow-hidden rounded-2xl cursor-pointer" data-aos="fade-in" data-aos-delay="200">
+                    <!-- REPLACE SRC below with: WhatsApp Image 2025-12-06 at 2.00.57 AM (1).jpeg -->
+                    <img src="media/driveway1.jpeg" class="w-full h-full object-cover transition duration-700 group-hover:scale-105" alt="Interlocking Driveway">
+                    <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-6">
+                        <div class="text-white transform translate-y-4 group-hover:translate-y-0 transition duration-300">
+                            <h4 class="font-bold text-lg">Interlock Driveway</h4>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Garage/Flooring -->
+                <div class="relative group overflow-hidden rounded-2xl cursor-pointer" data-aos="fade-in" data-aos-delay="300">
+                    <!-- REPLACE SRC below with: WhatsApp Image 2025-12-06 at 2.00.44 AM (1).jpeg -->
+                    <img src="media/garage.jpeg" class="w-full h-full object-cover transition duration-700 group-hover:scale-105" alt="Epoxy Flooring">
+                    <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-6">
+                        <div class="text-white transform translate-y-4 group-hover:translate-y-0 transition duration-300">
+                            <h4 class="font-bold text-lg">Epoxy Garage Floor</h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT CTA -->
+    <section id="contact" class="py-20 bg-gold-600 text-white text-center">
+        <div class="max-w-4xl mx-auto px-4" data-aos="zoom-in">
+            <h2 class="text-4xl md:text-5xl font-black mb-6">Ready to Start Your Project?</h2>
+            <p class="text-xl mb-10 opacity-90">Call us today for a free consultation. We serve Woodbridge, Toronto, and the entire GTA.</p>
+            <a href="tel:4372592664" class="inline-flex items-center gap-3 bg-white text-gold-600 font-bold py-4 px-10 rounded-full text-xl shadow-2xl hover:bg-slate-100 transition transform hover:scale-105">
+                <i class="fas fa-phone-alt"></i> 437-259-2664
+            </a>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-slate-900 text-white pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-16 border-b border-slate-800 pb-12">
+                <div>
+                    <div class="flex items-center gap-2 mb-6">
+                        <div class="w-8 h-8 bg-gold-600 rounded flex items-center justify-center text-slate-900 font-bold">T</div>
+                        <span class="font-bold text-xl">T.D.M.S. HANDYMAN</span>
+                    </div>
+                    <p class="text-slate-400 mb-6 leading-relaxed">
+                        Your trusted partner for home renovations. Specializing in plumbing, drywall, and high-end finishes. Building trust through transparency and quality.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center text-slate-400 hover:bg-gold-600 hover:text-white transition"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center text-slate-400 hover:bg-gold-600 hover:text-white transition"><i class="fab fa-facebook-f"></i></a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-6 text-white">Contact Info</h4>
+                    <ul class="space-y-4">
+                        <li class="flex items-start gap-3 text-slate-400">
+                            <i class="fas fa-map-marker-alt mt-1 text-gold-500"></i>
+                            <span>80 Cheltenham Ave,<br>Woodbridge, Ontario, L4L 1K7</span>
+                        </li>
+                        <li class="flex items-center gap-3 text-slate-400">
+                            <i class="fas fa-phone text-gold-500"></i>
+                            <a href="tel:4372592664" class="hover:text-gold-500 transition">437-259-2664</a>
+                        </li>
+                        <li class="flex items-center gap-3 text-slate-400">
+                            <i class="fas fa-envelope text-gold-500"></i>
+                            <span>hameedlodi@gmail.com</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-bold mb-6 text-white">Our Promise</h4>
+                    <ul class="space-y-3 text-slate-400">
+                        <li class="flex items-center gap-2"><i class="fas fa-check-circle text-gold-500"></i> 10 Year Warranty</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-check-circle text-gold-500"></i> On-Time Completion</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-check-circle text-gold-500"></i> Licensed & Insured</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-check-circle text-gold-500"></i> Premium Materials</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="text-center text-slate-600 text-sm">
+                &copy; 2025 T.D.M.S. Handyman, Drywall and Paint. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- SCRIPTS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Initialize Animations
+        AOS.init({
+            once: true,
+            offset: 100
+        });
+
+        // Mobile Menu Logic
+        // Handled inline via onclick for simplicity
+
+        // Calculator Logic
+        function updateCalculatorInput() {
+            const type = document.getElementById('serviceType').value;
+            const label = document.getElementById('inputLabel');
+            const input = document.getElementById('unitInput');
+            
+            if (type === 'plumbing') {
+                label.innerText = "Number of Fixtures (Approx)";
+                input.placeholder = "e.g., 3 (Toilet, Sink, Tub)";
+            } else if (type === 'bathroom') {
+                label.innerText = "Bathroom Size (Sq Ft)";
+                input.placeholder = "e.g., 50 (Standard 5x10)";
+            } else if (type === 'kitchen') {
+                label.innerText = "Kitchen Size (Sq Ft)";
+                input.placeholder = "e.g., 150";
+            } else if (type === 'fence') {
+                label.innerText = "Fence Length (Linear Feet)";
+                input.placeholder = "e.g., 100";
+            } else {
+                label.innerText = "Total Square Footage";
+                input.placeholder = "e.g., 500";
+            }
+        }
+
+        function calculatePrice() {
+            const type = document.getElementById('serviceType').value;
+            const units = parseFloat(document.getElementById('unitInput').value);
+            const resultBox = document.getElementById('resultBox');
+            const output = document.getElementById('priceOutput');
+
+            if (!units || units <= 0) {
+                alert("Please enter a valid number.");
+                return;
+            }
+
+            let minPrice = 0;
+            let maxPrice = 0;
+
+            // Pricing Logic based on 2025 GTA Averages
+            switch(type) {
+                case 'drywall':
+                    // $2.00 - $4.50 per sq ft
+                    minPrice = units * 2.00;
+                    maxPrice = units * 4.50;
+                    break;
+                case 'plumbing':
+                    // Rough-in/Install $1200 - $1800 per fixture
+                    minPrice = units * 1200;
+                    maxPrice = units * 1800;
+                    break;
+                case 'bathroom':
+                    // Renovation ranges
+                    if (units < 45) { // Powder room approx
+                        minPrice = 8000;
+                        maxPrice = 15000;
+                    } else { // Full bath
+                        minPrice = 15000;
+                        maxPrice = 30000;
+                    }
+                    break;
+                case 'kitchen':
+                    // $200 - $400 per sq ft for full reno is common metric, or lump sum
+                    // Let's use lump sum approximation based on size tiers
+                    if (units < 100) {
+                        minPrice = 20000;
+                        maxPrice = 35000;
+                    } else {
+                        minPrice = 35000;
+                        maxPrice = 70000;
+                    }
+                    break;
+                case 'flooring':
+                    // $8 - $20 per sq ft (Install + Material avg)
+                    minPrice = units * 8;
+                    maxPrice = units * 20;
+                    break;
+                case 'fence':
+                    // $45 - $80 per linear foot
+                    minPrice = units * 45;
+                    maxPrice = units * 80;
+                    break;
+            }
+
+            // Formatting currency
+            const formatter = new Intl.NumberFormat('en-CA', {
+                style: 'currency',
+                currency: 'CAD',
+                maximumFractionDigits: 0
+            });
+
+            output.innerText = `${formatter.format(minPrice)} - ${formatter.format(maxPrice)}`;
+            resultBox.classList.remove('hidden');
+        }
+        
+        // Initial setup
+        updateCalculatorInput();
+    </script>
+</body>
+</html>
